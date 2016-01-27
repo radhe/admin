@@ -42,7 +42,7 @@ EXTRA_PARAMS=$1
 ### ----[ No Editing below ]------###
 #####################################
 
-[ -f ~/.my.cnf ] || error "Error: ~/.my.cnf not found"
+[ -f /etc/mysql/conf.d/my.cnf ] || error "Error: /etc/mysql/conf.d/my.cnf not found"
 
 ### Make Sure Bins Exists ###
 verify_bins(){
