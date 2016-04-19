@@ -18,7 +18,7 @@ apt-get update \
 # Google Repository
 echo "Adding google-chrome repository, please wait..."
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - \
-&& sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list' \
+&& sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
 || ee_lib_error "Unable to add google-chrome repository, exit status = " $?
 
 # Shutter Repository
